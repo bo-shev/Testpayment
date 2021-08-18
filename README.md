@@ -2,5 +2,5 @@
 
 1. Put this file to src/app/code
 2. Than execute comands: 
-      bin/magento setup:upgrade
-      composer update —no-dev
+    1.  bin/magento setup:upgrade
+    2.  composer update —no-dev
