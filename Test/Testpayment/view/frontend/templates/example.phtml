@@ -1,0 +1,35 @@
+<?php
+    use Magento\Framework\View\Element\Template;
+    /** @var Template $block */
+?>
+<h1>Thank you for your purchase!</h1>
+
+
+<p>
+    <?php
+
+    function statusText($status)
+    {
+        return "<h4>Your order status is ".$status."!</h4>";
+    }
+
+    switch ($block->getData('order_status'))
+    {
+        case 'completed': echo statusText('completed'); break;
+        case 'accepted': echo statusText('accepted'); break;
+        case 'error': echo statusText('error');
+                      echo "<p>".$block->getData('customer_message')."</p>";
+        break;
+
+        default: echo statusText($block->getData('order_status')); break;
+    }
+
+    ?>
+</p>
+<br>
+<!--<span>--><?php //echo $block->getData('order_info');?><!--</span>-->
+<br>
+
+<p><?php echo $block->getData('order_description');?></p>
+
+

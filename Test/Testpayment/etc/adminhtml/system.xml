@@ -16,10 +16,6 @@
                 <field id="api_key" translate="label" type="obscure" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="0">
                     <label>Api Key</label>
                 </field>
-<!--                <field id="endpoint" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="0">-->
-<!--                    <label>Endpoint</label>-->
-<!--&lt;!&ndash;                    <frontend_class>validate-number</frontend_class>&ndash;&gt;-->
-<!--                </field>-->
 
                 <field id="title" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Title</label>

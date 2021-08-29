@@ -16,4 +16,5 @@ define(
         );
         return Component.extend({});
     }
+
 );

@@ -1,4 +1,5 @@
 <?php
+
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $payment = $objectManager->create('Magento\Sales\Model\Order')->loadByIncrementId($block->getOrderId())->getPayment();
 echo $paymentMethodTitle = $payment->getMethodInstance()->getTitle();
@@ -18,7 +19,7 @@ echo $paymentMethodTitle = $payment->getMethodInstance()->getTitle();
         <?php  else :?>
             <p><?= $block->escapeHtml(__('Your order # is: <span>%1</span>.', $block->getOrderId()), ['span']) ?></p>
         <?php endif;?>
-            <p><?= $block->escapeHtml(__('We\'llhhhhhhhhhhhhhhhhhhhhhhhh email you an order confirmation with details and tracking info.')) ?></p>
+            <p><?= $block->escapeHtml(__('We\'ll email you an order confirmation with details and tracking info.')) ?></p>
     <?php endif;?>
 
     <?= $block->getAdditionalInfoHtml() ?>
@@ -29,6 +30,3 @@ echo $paymentMethodTitle = $payment->getMethodInstance()->getTitle();
         </div>
     </div>
 </div>
-
-
-echo "Hello! It is success page!"; //Bussiness logic

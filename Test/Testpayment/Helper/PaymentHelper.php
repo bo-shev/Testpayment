@@ -61,10 +61,16 @@ class PaymentHelper extends AbstractHelper
             "description" => $description,
             "merchant_order_id" => $merchantOrderId,
             "return_url" => $returnUrl,
-            "transactions" => $transactions
+            "transactions" => array($transactions)
         );
 
         return $dataArray;
+    }
+
+    public function createNewOrder($client, $dataForRequest)
+    {
+        $order = $client->createOrder($dataForRequest);
+        return $order;
     }
 
 }
